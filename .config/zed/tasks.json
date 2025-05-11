@@ -1,0 +1,50 @@
+[
+  {
+    "label": "sbt / clean",
+    "command": "sbt clean",
+    "tags": [
+      "scala-test"
+    ]
+  },
+  {
+    "label": "sbt / compile",
+    "command": "sbt compile",
+    "tags": [
+      "scala-test"
+    ]
+  },
+  {
+    "label": "sbt / test",
+    "command": "sbt test",
+    "tags": [
+      "scala-test"
+    ]
+  },
+  {
+    "label": "sbt / integration test",
+    "command": "sbt it",
+    "tags": [
+      "scala-test"
+    ]
+  },
+  {
+    "label": "sbt / scalafmtAll",
+    "command": "sbt fmt",
+    "tags": [
+      "scala-test"
+    ]
+  },
+  {
+    "label": "bloop / test",
+    "name": "run-bloop-test",
+    "command": "./.zed/run-bloop-tests.sh ${ZED_WORKTREE_ROOT} ${ZED_SYMBOL}",
+    "working_directory": "${workspace_root}",
+    "environment": {
+      "PATH": "${env.PATH}"
+    },
+    "keystroke": "ctrl-shift-r",
+    "tags": [
+      "scala-test"
+    ]
+  }
+]
