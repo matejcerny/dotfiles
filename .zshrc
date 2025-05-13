@@ -78,7 +78,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# Coursier with completion
 export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit ; compinit
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
