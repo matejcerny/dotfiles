@@ -65,11 +65,7 @@ CASE_SENSITIVE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(aws colored-man-pages colorize docker fzf git sbt scala)
 
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -83,6 +79,10 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit ; compinit
+
+# Jenv aka JAVA home
+export PATH="$PATH:$HOME/.jenv/bin"
+eval "$(jenv init -)"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
