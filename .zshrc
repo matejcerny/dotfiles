@@ -84,6 +84,18 @@ autoload -Uz compinit ; compinit
 export PATH="$PATH:$HOME/.jenv/bin"
 eval "$(jenv init -)"
 
+# python
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH="${PYENV_ROOT}/bin:${PATH}"
+eval "$(pyenv init -)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/matej.cerny/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# sde
+source $HOME/.sde/profile/profile.sh
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -112,3 +124,4 @@ getip () {
 
 # For a full list of active aliases, run `alias`.
 alias l='lsd -la --group-dirs first'
+alias brix='~/brix/Brix'
