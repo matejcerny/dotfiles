@@ -15,7 +15,17 @@
   {
     "context": "Editor",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "ctrl-alt-l": "editor::Format",
+      "ctrl-alt-o": "editor::OrganizeImports",
+      "ctrl-h": "project_panel::ToggleFocus",
+      "shift shift": "file_finder::Toggle",
+      "ctrl-j": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-j": "terminal_panel::ToggleFocus"
     }
   },
   {
