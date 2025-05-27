@@ -31,7 +31,7 @@
   "relative_line_numbers": true,
   "ui_font_size": 14,
   "buffer_font_size": null,
-  "buffer_font_family": "Fira Code",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "preferred_line_length": 120,
   "tab_size": 2,
   "format_on_save": "off",

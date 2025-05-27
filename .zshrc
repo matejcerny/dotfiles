@@ -75,12 +75,15 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Coursier with completion
+# coursier with completion
 export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit ; compinit
 
-# Jenv aka JAVA home
+# direnv
+eval "$(direnv hook zsh)"
+
+# jenv aka JAVA home
 export PATH="$PATH:$HOME/.jenv/bin"
 eval "$(jenv init -)"
 
