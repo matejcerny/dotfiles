@@ -125,6 +125,16 @@ getip () {
         echo $ip
 }
 
+# translate from English to Czech
+en() {
+  trans -s en -t cs "$*"
+}
+
+# translate from Czech to English
+cz() {
+  trans -s cs -t en "$*"
+}
+
 # For a full list of active aliases, run `alias`.
 alias l='lsd -la --group-dirs first'
 alias brix='~/brix/Brix'

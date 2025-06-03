@@ -73,7 +73,7 @@
     "env": {
       "EDITOR": "zed --wait"
     },
-    "font_family": "Fira Code"
+    "font_family": "FiraCode Nerd Font Mono"
   },
   "go_to_definition_fallback": "none",
   "journal": {
@@ -147,5 +147,6 @@
     //     "color": "#9876AA"
     //   }
     // }
+    "hint": "#e1e69a"
   }
 }

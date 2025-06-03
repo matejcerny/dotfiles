@@ -33,5 +33,12 @@
     "bindings": {
       "p": ["vim::Paste", { "preserve_clipboard": true }]
     }
+  },
+  {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs || vim_operator == ds",
+    "bindings": {
+      "q": "vim::AnyQuotes", // viq = selects everything inside quotes
+      "b": "vim::AnyBrackets" // vib = selects everything inside brackets
+    }
   }
 ]
