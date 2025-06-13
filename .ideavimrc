@@ -17,10 +17,15 @@ set scrolloff=5
 " Do incremental searching.
 set incsearch
 
+" q for any quotes and b for any brackets
+set mini.ai
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" Turn off the beep/bonk/bell sound when pressing control in macOS
+set visualbell
+set noerrorbells
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'

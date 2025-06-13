@@ -1,6 +1,6 @@
+.jenv
 .config/fish
 .config/gh
-.config/.jenv
 .config/jgit
 .config/stripe
 .config/zed/prompts

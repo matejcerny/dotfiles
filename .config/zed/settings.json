@@ -29,7 +29,7 @@
   "vim_mode": true,
   "confirm_quit": false,
   "relative_line_numbers": true,
-  "ui_font_size": 14,
+  "ui_font_size": 15,
   "buffer_font_size": null,
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "preferred_line_length": 120,
@@ -147,6 +147,7 @@
     //     "color": "#9876AA"
     //   }
     // }
-    "hint": "#e1e69a"
+    // "hint": "#e1e69a"
+    // "text.muted": "#C2D1E0"
   }
 }
