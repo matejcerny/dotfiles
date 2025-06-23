@@ -56,6 +56,9 @@ nmap gi <Action>(GotoImplementation)
 " show the hover
 nmap gh <Action>(QuickJavaDoc)
 
+" find in files
+nmap g/ <Action>(FindInPath)
+
 " rename a variable
 set idearefactormode=keep
 nmap cd <Action>(RenameElement)
