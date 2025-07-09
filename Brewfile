@@ -56,5 +56,6 @@ cask "slack"
 cask "sourcetree"
 cask "vlc"
 cask "zed"
+cask "zoom"
 mas "Crypto Pro", id: 980888073
 mas "Toggl Track", id: 1291898086
