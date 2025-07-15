@@ -1,5 +1,6 @@
 tap "coursier/formulas"
 tap "virtuslab/scala-cli"
+brew "aws-cdk"
 brew "awscli"
 brew "bat"
 brew "coursier"
