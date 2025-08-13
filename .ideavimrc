@@ -59,6 +59,9 @@ nmap gh <Action>(QuickJavaDoc)
 " find in files
 nmap g/ <Action>(FindInPath)
 
+" show scala given implementation
+nmap gt <Action>(Scala.ShowImplicitArguments)
+
 " rename a variable
 set idearefactormode=keep
 nmap cd <Action>(RenameElement)
