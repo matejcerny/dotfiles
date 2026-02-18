@@ -1,50 +1,27 @@
 [
   {
-    "label": "sbt / clean",
-    "command": "sbt clean",
-    "tags": [
-      "scala-test"
-    ]
+    "label": "sbt it",
+    "command": "sbt --client it",
+    "reveal": "no_focus",
   },
   {
-    "label": "sbt / compile",
-    "command": "sbt compile",
-    "tags": [
-      "scala-test"
-    ]
+    "label": "sbt scalafmtAll",
+    "command": "sbt --client scalafmtAll",
+    "reveal": "no_focus",
   },
   {
-    "label": "sbt / test",
-    "command": "sbt test",
-    "tags": [
-      "scala-test"
-    ]
+    "label": "mill smithy.format",
+    "command": "./mill smithy.format",
+    "reveal": "no_focus",
   },
   {
-    "label": "sbt / integration test",
-    "command": "sbt it",
-    "tags": [
-      "scala-test"
-    ]
+    "label": "mill smithy.buildConfig",
+    "command": "./mill smithy.buildConfig",
+    "reveal": "no_focus",
   },
   {
-    "label": "sbt / scalafmtAll",
-    "command": "sbt fmt",
-    "tags": [
-      "scala-test"
-    ]
-  },
-  {
-    "label": "bloop / test",
-    "name": "run-bloop-test",
-    "command": "./.zed/run-bloop-tests.sh ${ZED_WORKTREE_ROOT} ${ZED_SYMBOL}",
-    "working_directory": "${workspace_root}",
-    "environment": {
-      "PATH": "${env.PATH}"
-    },
-    "keystroke": "ctrl-shift-r",
-    "tags": [
-      "scala-test"
-    ]
+    "label": "mill compile",
+    "command": "./mill compile",
+    "reveal": "no_focus",
   }
 ]

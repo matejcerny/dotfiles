@@ -53,14 +53,17 @@ nmap <C-l> <Action>(Forward)
 " implementation of trait/interface
 nmap gi <Action>(GotoImplementation)
 
+" show scala given implementation
+nmap gt <Action>(Scala.ShowImplicitArguments)
+
 " show the hover
 nmap gh <Action>(QuickJavaDoc)
 
 " find in files
 nmap g/ <Action>(FindInPath)
 
-" show scala given implementation
-nmap gt <Action>(Scala.ShowImplicitArguments)
+" show git blame
+nmap gb <Action>(Annotate)
 
 " rename a variable
 set idearefactormode=keep

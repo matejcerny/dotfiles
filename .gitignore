@@ -2,5 +2,6 @@
 .config/fish
 .config/gh
 .config/jgit
+.config/jiratui
 .config/stripe
 .config/zed/prompts

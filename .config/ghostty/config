@@ -1,5 +1,15 @@
+theme = Tomorrow Night
 font-family = "Fira Code"
 font-size = 16
 
 window-padding-x = 20
 window-padding-y = 20
+keybind = shift+enter=text:\x1b\r
+
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+
+keybind = alt+k=scroll_page_lines:-3
+keybind = alt+j=scroll_page_lines:3

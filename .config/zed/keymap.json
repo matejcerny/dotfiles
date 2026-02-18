@@ -9,8 +9,10 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
-    }
+      "shift shift": "file_finder::Toggle",
+      "ctrl-l": "editor::ToggleFocus",
+      "cmd-3": "diagnostics::Deploy",
+    },
   },
   {
     "context": "Editor",
@@ -19,26 +21,35 @@
       "ctrl-alt-o": "editor::OrganizeImports",
       "ctrl-h": "project_panel::ToggleFocus",
       "shift shift": "file_finder::Toggle",
-      "ctrl-j": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-j": "terminal_panel::ToggleFocus",
+      "cmd-l": "git_panel::OpenMenu",
+      "ctrl-l": "git_panel::ToggleFocus",
+    },
   },
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-j": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-k": "terminal_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
-      "p": ["vim::Paste", { "preserve_clipboard": true }]
-    }
+      "p": ["vim::Paste", { "preserve_clipboard": true }],
+    },
   },
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs || vim_operator == ds",
     "bindings": {
       "q": "vim::AnyQuotes", // viq = selects everything inside quotes
-      "b": "vim::AnyBrackets" // vib = selects everything inside brackets
-    }
+      "b": "vim::AnyBrackets", // vib = selects everything inside brackets
+    },
+  },
+  {
+    "context": "(GitPanel && ChangesList)",
+    "bindings": {
+      "cmd-l": "git_panel::Close",
+      "ctrl-h": "git_panel::ToggleFocus",
+    },
   }
 ]

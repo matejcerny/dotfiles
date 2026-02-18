@@ -65,6 +65,9 @@ CASE_SENSITIVE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Path to zsh completion cache
+export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump"
+
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(aws colored-man-pages colorize docker fzf git sbt scala)
 
@@ -72,6 +75,8 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -82,6 +87,12 @@ autoload -Uz compinit ; compinit
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# golang
+export GOPATH=$HOME/dev/go
+export GOROOT=/opt/homebrew/opt/go@1.24/libexec
+export PATH="/opt/homebrew/opt/go@1.24/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 # jenv aka JAVA home
 export PATH="$PATH:$HOME/.jenv/bin"
@@ -96,8 +107,8 @@ eval "$(pyenv init -)"
 export PATH="/Users/matej.cerny/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-# sde
-source $HOME/.sde/profile/profile.sh
+# sxm
+source $HOME/.sxm/config.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -118,6 +129,9 @@ source $HOME/.sde/profile/profile.sh
 # the $ZSH_CUSTOM folder, with .zsh extension. Examples:
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
+
+eval "$(zoxide init --cmd cd zsh)"
+
 # prints wifi ip address
 getip () {
         ip=$(ifconfig | grep -v "127.0.0.1" | grep -w inet | awk '{print $2}')
@@ -137,4 +151,10 @@ cz() {
 
 # For a full list of active aliases, run `alias`.
 alias l='lsd -la --group-dirs first'
-alias brix='~/brix/Brix'
+alias mc='yazi'
+alias vi='nvim'
+alias vim='nvim'
+alias bvim='nvim'
+alias ggit='serie'
+alias shutdownsbt="jps -v | grep sbt-launch | cut -f1 -d ' ' | xargs kill -9"
+alias showsbt="jps -v | grep sbt-launch | cut -f1 -d ' '"

@@ -7,6 +7,43 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "colorize_brackets": true,
+  "use_system_window_tabs": false,
+  "bottom_dock_layout": "contained",
+  "preview_tabs": {
+    "enable_preview_from_file_finder": false
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "title_bar": {
+    "show_onboarding_banner": true,
+    "show_branch_icon": false
+  },
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "status_bar": {
+    "cursor_position_button": true
+  },
+  "indent_guides": {
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware",
+    "enabled": true
+  },
+  "gutter": {
+    "breakpoints": false
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "right"
+  },
+  "auto_update_extensions": {
+    "scala": true
+  },
   "icon_theme": "JetBrains Icons Dark",
   "telemetry": {
     "diagnostics": false,
@@ -16,8 +53,7 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
-    },
-    "version": "2"
+    }
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -28,29 +64,28 @@
   "theme": "BlackFox",
   "vim_mode": true,
   "confirm_quit": false,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "ui_font_size": 15,
   "buffer_font_size": null,
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "preferred_line_length": 120,
   "tab_size": 2,
   "format_on_save": "off",
-  "useTabs": false,
   "toolbar": {
+    "code_actions": false,
+    "selections_menu": true,
     "breadcrumbs": false,
     "quick_actions": false
   },
-  "tabs": { "file_icons": true },
+  "tabs": { "show_diagnostics": "off",
+            "git_status": false,
+            "file_icons": true },
   "collaboration_panel": {
     // Whether to show the collaboration panel button in the status bar.
     "button": false
   },
   "project_panel": {
     "auto_fold_dirs": true
-  },
-  "chat_panel": {
-    // Whether to show the collaboration panel button in the status bar.
-    "button": "when_in_call"
   },
   "diagnostics": {
     // Whether to show warnings or not by default.
@@ -63,7 +98,11 @@
       "max_severity": "warning"
     }
   },
-  "autosave": "on_window_change",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
   "git": {
     "inline_blame": {
       "enabled": false
@@ -97,9 +136,6 @@
     },
     "Scala": {
       "soft_wrap": "none"
-    },
-    "Unknown": {
-      "soft_wrap": "editor_width"
     }
   },
   "inlay_hints": {
@@ -119,8 +155,13 @@
       "initialization_options": {
         "isHttpEnabled": true
       },
-      "testUserInterface": "test explorer",
+      // "testUserInterface": "test explorer",
       "settings": {
+        "defaultBspToBuildTool": true,
+        "startMcpServer": true,
+        "mcpClient": "claude",
+        "metals.serverVersion": "2.0.0-M7",
+        "metals.serverProperties": ["-Xmx4g"],
         "inlayHints": {
           "inferredTypes": {
             "enable": false
@@ -141,12 +182,21 @@
       }
     }
   },
-  "experimental.theme_overrides": {
+  "theme_overrides": {
+    "BlackFox Theme": {
+      "vim.insert.background": "#000000"
+      // "accents": ["#E8BA36", "#54A857", "#359FF4", "#6E7ED9", "#179387"]
+    }
     // "syntax": {
-    //   "property": {
-    //     "color": "#9876AA"
-    //   }
-    // }
+      // "property": {
+      //   "color": "#9876AA",
+      //   "font_style": "italic"
+      // },
+      // "parameter": {
+      //   "color": "#9876AA",
+      //   "font_style": "italic"
+      // },
+    // },
     // "hint": "#e1e69a"
     // "text.muted": "#C2D1E0"
   }
